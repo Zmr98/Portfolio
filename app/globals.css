@@ -18,6 +18,7 @@ body{ background:var(--ink); color:var(--paper); font-family:'Inter', sans-serif
 a{ color:inherit; text-decoration:none; }
 img{ max-width:100%; display:block; }
 .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 32px; }
+@media (max-width:640px){ .wrap{ padding:0 20px; } }
 h1,h2,h3{ font-family:'Space Grotesk', sans-serif; font-weight:700; letter-spacing:-0.01em; }
 
 .scrub-bar{ position:fixed; top:0; left:0; width:100%; height:3px; background:var(--line); z-index:1000; }
@@ -38,6 +39,7 @@ html[data-theme="light"] .theme-toggle{ background:rgba(255,255,255,0.7); }
 .theme-toggle:hover{ border-color:var(--amber); }
 
 .section{ padding:120px 0; position:relative; overflow:hidden; }
+@media (max-width:640px){ .section{ padding:72px 0; } }
 .section.alt{ background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
 .watermark{ position:absolute; top:10%; left:50%; font-family:'Space Grotesk'; font-weight:700; font-size:clamp(90px,16vw,220px); color:var(--paper); opacity:0.06; white-space:nowrap; pointer-events:none; z-index:0; user-select:none; }
 .section .wrap{ position:relative; z-index:1; }
@@ -76,6 +78,16 @@ html[data-theme="light"] .theme-toggle{ background:rgba(255,255,255,0.7); }
 .about-grid{ display:grid; grid-template-columns:1.2fr 1fr; gap:64px; }
 .about-text p{ color:var(--paper); margin-bottom:16px; font-size:16px; max-width:52ch; }
 .about-text p.dim{ color:var(--muted); }
+
+/* Justified paragraphs read as more "finished"/editorial on wider
+   screens; on narrow phones justify tends to create ugly gaps between
+   words, so it's left-aligned there instead. */
+@media (min-width:640px){
+  .about-text p, .hero-tag, .section-sub{
+    text-align:justify; text-justify:inter-word;
+    -webkit-hyphens:auto; hyphens:auto;
+  }
+}
 .skill-group{ margin-bottom:22px; }
 .skill-group h4{ font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:10px; }
 .skill-pills{ display:flex; flex-wrap:wrap; gap:8px; }
@@ -96,7 +108,12 @@ html[data-theme="light"] .theme-toggle{ background:rgba(255,255,255,0.7); }
 .exp-group{ margin-bottom:52px; }
 .exp-group:last-child{ margin-bottom:0; }
 .exp-group-head{ display:flex; align-items:center; gap:14px; margin-bottom:22px; }
-.exp-logo{ width:48px; height:48px; border-radius:10px; object-fit:cover; border:1px solid var(--line); background:var(--panel-2); flex-shrink:0; }
+.exp-logo-box{
+  width:52px; height:52px; border-radius:10px; border:1px solid var(--line);
+  background:var(--panel-2); display:flex; align-items:center; justify-content:center;
+  padding:7px; flex-shrink:0; overflow:hidden;
+}
+.exp-logo-box img{ max-width:100%; max-height:100%; object-fit:contain; }
 .exp-logo-placeholder{
   width:48px; height:48px; border-radius:10px; border:1px solid var(--line); background:var(--panel-2);
   display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-weight:700;
@@ -112,6 +129,12 @@ html[data-theme="light"] .theme-toggle{ background:rgba(255,255,255,0.7); }
 .exp-company{ color:var(--muted); font-size:13.5px; margin-bottom:12px; }
 .exp-position ul{ padding-left:18px; color:var(--paper); }
 .exp-position li{ margin-bottom:6px; font-size:14.5px; }
+
+@media (max-width:640px){
+  .exp-positions{ padding-left:18px; margin-left:6px; }
+  .exp-position::before{ left:-23px; }
+  .exp-logo-box, .exp-logo-placeholder{ width:44px; height:44px; }
+}
 
 /* =====================================================================
    SCROLL REVEAL — a lighter, "charm" pass separate from parallax: cards
@@ -159,7 +182,7 @@ footer .wrap{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:8
 .dash-section h3{ font-size:18px; margin-bottom:18px; }
 .item-card{ border:1px solid var(--line); border-radius:var(--radius); padding:18px; margin-bottom:14px; background:var(--panel); }
 .item-row{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
-.thumb-preview{ width:64px; height:64px; object-fit:cover; border-radius:6px; border:1px solid var(--line); }
+.thumb-preview{ width:64px; height:64px; object-fit:contain; border-radius:6px; border:1px solid var(--line); background:var(--panel-2); padding:4px; }
 .remove-btn{ font-size:12px; color:#e05c4e; background:none; border:none; cursor:pointer; font-family:inherit; }
 .add-btn{ font-size:13px; padding:9px 14px; border-radius:8px; border:1px dashed var(--line); background:transparent; color:var(--muted); cursor:pointer; font-family:inherit; }
 .save-bar{ position:fixed; bottom:0; left:0; right:0; background:var(--panel); border-top:1px solid var(--line); padding:14px 24px; display:flex; justify-content:flex-end; align-items:center; gap:14px; z-index:50; }
