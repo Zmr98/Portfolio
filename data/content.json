@@ -1,0 +1,283 @@
+{
+  "hero": {
+    "eyebrow": "COLOMBO, SRI LANKA \u2014 AVAILABLE FOR WORK",
+    "name": "MOHAMED ZAMEER",
+    "role": "Associate IT & Digital Officer \u2014 CT Smith Securities",
+    "tagline": "Four years spent on both sides of the screen: keeping websites, KYC pipelines and IT infrastructure running, and cutting the video and design work that ends up on them.",
+    "portraitImage": "/uploads/profile.png",
+    "portraitCaption": "Capital Markets Award Night, 2025"
+  },
+  "about": {
+    "summary": "IT and Digital professional with 4+ years of experience across web development, IT operations, and content creation.",
+    "detail": "Built a strong foundation in e-commerce at Daraz (Alibaba Group), contributing to platform UI/UX improvements and regional UAT coordination. Currently working in the financial services sector managing IT infrastructure, vendor relations, KYC operations, and day-to-day digital activities \u2014 equally comfortable handling a technical issue and a creative brief. Currently completing a BSc (Hons) in Computing at Wrexham University.",
+    "skills": {
+      "web": [
+        "WordPress",
+        "WooCommerce",
+        "WIX",
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "PHP (basic)",
+        "Bootstrap"
+      ],
+      "editing": [
+        "Adobe Photoshop",
+        "Adobe Illustrator",
+        "CapCut",
+        "Canva",
+        "Figma"
+      ],
+      "other": [
+        "Excel",
+        "SQL",
+        "Agile",
+        "GitHub",
+        "Android Studio",
+        "Data Analysis"
+      ],
+      "soft": [
+        "Analytical Thinking",
+        "Time Management",
+        "Attention to Detail",
+        "Adaptability",
+        "Leadership"
+      ]
+    }
+  },
+  "reels": [
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7415324358916792320",
+      "label": "Business Podcast Episode",
+      "image": ""
+    },
+    {
+      "type": "instagram-reel",
+      "url": "https://www.instagram.com/reel/DUivFNdCGKE/",
+      "label": "",
+      "image": ""
+    },
+    {
+      "type": "instagram-reel",
+      "url": "https://www.instagram.com/reel/DUnbA4AAMu9/",
+      "label": "",
+      "image": ""
+    },
+    {
+      "type": "instagram-reel",
+      "url": "https://www.instagram.com/reel/DVdWT5bCgx8/",
+      "label": "",
+      "image": ""
+    },
+    {
+      "type": "instagram-reel",
+      "url": "https://www.instagram.com/reel/DVl-YhID9rR/",
+      "label": "",
+      "image": ""
+    },
+    {
+      "type": "instagram-reel",
+      "url": "https://www.instagram.com/reel/DVspku0Ao73/",
+      "label": "",
+      "image": ""
+    },
+    {
+      "type": "instagram-reel",
+      "url": "https://www.instagram.com/reel/DV8MTtNkRhT/",
+      "label": "",
+      "image": ""
+    },
+    {
+      "type": "instagram-reel",
+      "url": "https://www.instagram.com/reel/DWGCjVTk7XZ/",
+      "label": "",
+      "image": ""
+    },
+    {
+      "type": "instagram-reel",
+      "url": "https://www.instagram.com/reel/DWfyDqjCg03/",
+      "label": "",
+      "image": ""
+    },
+    {
+      "type": "instagram-reel",
+      "url": "https://www.instagram.com/reel/DWgVwszAAwF/",
+      "label": "",
+      "image": ""
+    },
+    {
+      "type": "instagram-reel",
+      "url": "https://www.instagram.com/reel/DXMJ3oUivIX/",
+      "label": "",
+      "image": ""
+    },
+    {
+      "type": "instagram-reel",
+      "url": "https://www.instagram.com/reel/DXwCrsOCr0U/",
+      "label": "",
+      "image": ""
+    },
+    {
+      "type": "instagram-reel",
+      "url": "https://www.instagram.com/reel/DbFYzq8IuQF/",
+      "label": "",
+      "image": ""
+    }
+  ],
+  "flyers": [
+    {
+      "url": "https://www.instagram.com/p/DUSLNbMDrh0/",
+      "caption": "Design \u2014 CT Smith",
+      "image": ""
+    },
+    {
+      "url": "https://www.instagram.com/p/DUUb3pyl21w/",
+      "caption": "Design \u2014 CT Smith",
+      "image": ""
+    },
+    {
+      "url": "https://www.instagram.com/p/DVNPIJCDXcV/",
+      "caption": "Design \u2014 CT Smith",
+      "image": ""
+    },
+    {
+      "url": "https://www.instagram.com/p/DWG6W-hDVkd/",
+      "caption": "Design \u2014 CT Smith",
+      "image": ""
+    },
+    {
+      "url": "https://www.instagram.com/p/DWxyUnSk8i_/",
+      "caption": "Design \u2014 CT Smith",
+      "image": ""
+    },
+    {
+      "url": "https://www.instagram.com/p/DXGRJ9PDkp3/",
+      "caption": "Design \u2014 CT Smith",
+      "image": ""
+    },
+    {
+      "url": "https://www.instagram.com/p/DY86WFlT_LQ/",
+      "caption": "Design \u2014 CT Smith",
+      "image": ""
+    }
+  ],
+  "experience": [
+    {
+      "groupName": "CT Smith Group",
+      "logo": "",
+      "positions": [
+        {
+          "time": "MAY 2025 \u2014 PRESENT",
+          "role": "Associate Information Technology & Digital Officer",
+          "company": "CT Smith Securities (Pvt) Ltd",
+          "bullets": [
+            "Managed the end-to-end KYC process \u2014 reviewing applications, verifying documents, authenticating clients via video call.",
+            "Coordinated with vendors on domain/DNS, Google Workspace admin and endpoint security; maintained the company website and internal IT hardware.",
+            "Directed and produced business podcast episodes end to end, from shoot to edit.",
+            "Designed all company promotional material \u2014 posters, flyers, digital assets \u2014 and ran social media content end to end."
+          ]
+        },
+        {
+          "time": "OCT 2024 \u2014 MAY 2025",
+          "role": "Associate Information Technology & Digital Officer",
+          "company": "CT Smith Asset Management (Pvt) Ltd",
+          "bullets": [
+            "Maintained and optimized the company website and corporate social platforms.",
+            "Designed promotional posters, flyers and leaflets for business use.",
+            "Supported IT infrastructure audits and internal network troubleshooting."
+          ]
+        }
+      ]
+    },
+    {
+      "groupName": "Daraz (Alibaba Group)",
+      "logo": "",
+      "positions": [
+        {
+          "time": "MAR 2023 \u2014 FEB 2024",
+          "role": "Assistant Manager",
+          "company": "",
+          "bullets": [
+            "Oversaw website/app changes, contributing to a 20% lift in user engagement and 15% gain in functional efficiency.",
+            "Tracked UI/UX performance and analyzed 10+ homepage modules daily for optimization.",
+            "Coordinated regional UAT and onsite project initiatives, lifting operational efficiency by 10%."
+          ]
+        },
+        {
+          "time": "FEB 2022 \u2014 MAY 2023",
+          "role": "On-Site Executive",
+          "company": "",
+          "bullets": [
+            "Ran mega sale campaigns \u2014 11.11, Avurudu and seasonal promos \u2014 with Design and Merchandising teams.",
+            "Built and published campaign pages in the Daraz CMS from designer mockups, sustaining an 80% CTR on the homepage."
+          ]
+        }
+      ]
+    },
+    {
+      "groupName": "NetBees Consulting (Pvt) Ltd",
+      "logo": "",
+      "positions": [
+        {
+          "time": "AUG 2021 \u2014 FEB 2022",
+          "role": "Software Developer",
+          "company": "",
+          "bullets": [
+            "Managed e-commerce sites Indochina.lk, Findfast.lk and booking portal CityBook.LK.",
+            "Built and maintained WordPress sites with Elementor for clients, applying SEO for visibility.",
+            "Designed logos, banners and marketing images for client branding."
+          ]
+        },
+        {
+          "time": "DEC 2020 \u2014 JUN 2021",
+          "role": "Intern Web & Mobile Developer",
+          "company": "",
+          "bullets": [
+            "Improved UI and functionality of a WordPress site; built a companion mobile app using React Native WebView.",
+            "Developed and tested pages with HTML, CSS and PHP."
+          ]
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "BZL Elevators \u2014 Company Portfolio Site",
+      "desc": "Freelance build for a company portfolio.",
+      "stack": [
+        "WordPress",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "link": ""
+    },
+    {
+      "title": "Student Learning Management System",
+      "desc": "Android app for coursework and student tracking.",
+      "stack": [
+        "Android Studio",
+        "Java",
+        "Firebase"
+      ],
+      "link": "https://github.com/Zmr98/Project"
+    },
+    {
+      "title": "Online Food Ordering System",
+      "desc": "Ordering platform built on WordPress.",
+      "stack": [
+        "WordPress",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "link": ""
+    }
+  ],
+  "contact": {
+    "email": "bkzameer@gmail.com",
+    "phone": "+94 75 269 2111",
+    "linkedin": "https://linkedin.com/in/bk-mohamed-zameer"
+  }
+}
