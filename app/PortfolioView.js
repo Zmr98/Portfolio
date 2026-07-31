@@ -202,19 +202,32 @@ export default function PortfolioView({ content }) {
             <div className="exp-group reveal" key={gi} style={{ transitionDelay: `${gi * 0.06}s` }}>
               <div className="exp-group-head">
                 {group.logo ? (
-                  <img className="exp-logo" src={group.logo} alt={group.groupName} />
+                  <div
+                    className="exp-logo-box"
+                    style={{
+                      width: 52, height: 52, borderRadius: 10, border: '1px solid var(--line)',
+                      background: 'var(--panel-2)', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      padding: 7, flexShrink: 0, overflow: 'hidden',
+                    }}
+                  >
+                    <img
+                      src={group.logo}
+                      alt={group.groupName || ''}
+                      style={{ display: 'block', width: '100%', height: '100%', objectFit: 'contain' }}
+                    />
+                  </div>
                 ) : (
-                  <div className="exp-logo-placeholder">{group.groupName.charAt(0)}</div>
+                  <div className="exp-logo-placeholder">{(group.groupName || '?').charAt(0)}</div>
                 )}
-                <div className="exp-group-name">{group.groupName}</div>
+                <div className="exp-group-name">{group.groupName || 'Untitled company'}</div>
               </div>
               <div className="exp-positions">
-                {group.positions.map((p, pi) => (
+                {(group.positions || []).map((p, pi) => (
                   <div className="exp-position" key={pi}>
                     <span className="exp-time">{p.time}</span>
                     <div className="exp-role">{p.role}</div>
                     {p.company && <div className="exp-company">{p.company}</div>}
-                    <ul>{p.bullets.map((b, bi) => <li key={bi}>{b}</li>)}</ul>
+                    <ul>{(p.bullets || []).map((b, bi) => <li key={bi}>{b}</li>)}</ul>
                   </div>
                 ))}
               </div>
