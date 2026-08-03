@@ -7,7 +7,23 @@ const ICONS = {
     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>',
   linkedin:
     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="7.5" y1="10" x2="7.5" y2="17"/><circle cx="7.5" cy="6.8" r="1"/><path d="M11.5 17v-4.2c0-1.6 1-2.6 2.4-2.6 1.4 0 2.1 1 2.1 2.6V17"/></svg>',
+  youtube:
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.5 9.2v5.6l5-2.8z" fill="currentColor" stroke="none"/></svg>',
 };
+
+const PLATFORM_META = {
+  'instagram-reel': { icon: 'instagram', label: 'Instagram Reel' },
+  linkedin: { icon: 'linkedin', label: 'LinkedIn' },
+  youtube: { icon: 'youtube', label: 'YouTube' },
+};
+
+// YouTube (unlike Instagram/LinkedIn) exposes a stable, public thumbnail
+// URL for any video with no login or API key — so unlike the others,
+// this one can be fetched automatically instead of needing a manual upload.
+function youtubeThumb(url) {
+  const match = url.match(/(?:youtu\.be\/|v=|shorts\/)([a-zA-Z0-9_-]{6,})/);
+  return match ? `https://img.youtube.com/vi/${match[1]}/hqdefault.jpg` : null;
+}
 
 function PlatformCard({ href, icon, type, cta, className = '', style }) {
   return (
@@ -265,19 +281,23 @@ export default function PortfolioView({ content }) {
           <div className="reel-grid">
             {reels.map((r, i) => {
               const delay = { transitionDelay: `${(i % 6) * 0.05}s` };
-              if (r.image) {
+              const meta = PLATFORM_META[r.type] || PLATFORM_META['instagram-reel'];
+              const autoThumb = r.type === 'youtube' ? youtubeThumb(r.url) : null;
+              const thumb = r.image || autoThumb;
+
+              if (thumb) {
                 return (
-                  <div className="reel-card reveal" key={i} style={delay}>
-                    <img src={r.image} alt={r.label || 'Reel'} />
-                    <div className="card-label">{r.label || (r.type === 'linkedin' ? 'LinkedIn' : 'Reel')}</div>
-                  </div>
+                  <a className="reel-card reveal" key={i} style={delay} href={r.url} target="_blank" rel="noopener noreferrer">
+                    <img src={thumb} alt={r.label || meta.label} />
+                    <div className="card-badge" dangerouslySetInnerHTML={{
+                      __html: `${ICONS[meta.icon]}<span>${meta.label}</span>`,
+                    }} />
+                    <div className="card-overlay"><span>Watch →</span></div>
+                    {r.label && <div className="card-label">{r.label}</div>}
+                  </a>
                 );
               }
-              return r.type === 'linkedin' ? (
-                <PlatformCard key={i} href={r.url} icon="linkedin" type="LinkedIn" cta={r.label || 'Watch on LinkedIn'} className="reveal" style={delay} />
-              ) : (
-                <PlatformCard key={i} href={r.url} icon="instagram" type="Instagram Reel" cta="Watch reel" className="reveal" style={delay} />
-              );
+              return <PlatformCard key={i} href={r.url} icon={meta.icon} type={meta.label} cta={r.label || 'Watch'} className="reveal" style={delay} />;
             })}
           </div>
         </div>
@@ -295,11 +315,16 @@ export default function PortfolioView({ content }) {
           <div className="flyer-grid">
             {flyers.map((f, i) => {
               const delay = { transitionDelay: `${(i % 6) * 0.05}s` };
+              const isInstagram = /instagram\.com/.test(f.url || '');
               return f.image ? (
-                <div className="flyer-card reveal" key={i} style={delay}>
+                <a className="flyer-card reveal" key={i} style={delay} href={f.url} target="_blank" rel="noopener noreferrer">
                   <img src={f.image} alt={f.caption || 'Flyer design'} />
+                  {isInstagram && (
+                    <div className="card-badge" dangerouslySetInnerHTML={{ __html: `${ICONS.instagram}<span>Design post</span>` }} />
+                  )}
+                  <div className="card-overlay"><span>View →</span></div>
                   <div className="card-label">{f.caption || 'Design'}</div>
-                </div>
+                </a>
               ) : (
                 <PlatformCard key={i} href={f.url} icon="instagram" type="Design post" cta="View on Instagram" className="reveal" style={delay} />
               );

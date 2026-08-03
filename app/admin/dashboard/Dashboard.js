@@ -171,6 +171,7 @@ export default function Dashboard({ initialContent }) {
               <div className="item-row">
                 {content.hero.portraitImage && <img className="thumb-preview" src={content.hero.portraitImage} alt="" />}
                 <input type="file" accept="image/*" onChange={(e) => e.target.files[0] && uploadHeroPhoto(e.target.files[0])} />
+                {content.hero.portraitImage && <button className="remove-btn" onClick={() => setHero('portraitImage', '')}>Remove photo</button>}
               </div>
             </div>
             <div className="field"><label>Photo caption</label>
@@ -214,16 +215,21 @@ export default function Dashboard({ initialContent }) {
                   >
                     <option value="instagram-reel">Instagram Reel</option>
                     <option value="linkedin">LinkedIn</option>
+                    <option value="youtube">YouTube</option>
                   </select>
                 </div>
                 <div className="field"><label>URL</label>
                   <input value={r.url} onChange={(e) => updateArrayItem('reels', i, 'url', e.target.value)} /></div>
                 <div className="field"><label>Label (optional)</label>
                   <input value={r.label} onChange={(e) => updateArrayItem('reels', i, 'label', e.target.value)} /></div>
-                <div className="field"><label>Preview image</label>
+                <div className="field">
+                  <label>
+                    Preview image {r.type === 'youtube' && '(optional — YouTube thumbnails load automatically)'}
+                  </label>
                   <div className="item-row">
                     {r.image && <img className="thumb-preview" src={r.image} alt="" />}
                     <input type="file" accept="image/*" onChange={(e) => e.target.files[0] && uploadImage('reels', i, e.target.files[0])} />
+                    {r.image && <button className="remove-btn" onClick={() => updateArrayItem('reels', i, 'image', '')}>Remove image</button>}
                   </div>
                 </div>
                 <button className="remove-btn" onClick={() => removeArrayItem('reels', i)}>Remove item</button>
@@ -251,6 +257,7 @@ export default function Dashboard({ initialContent }) {
                   <div className="item-row">
                     {f.image && <img className="thumb-preview" src={f.image} alt="" />}
                     <input type="file" accept="image/*" onChange={(e) => e.target.files[0] && uploadImage('flyers', i, e.target.files[0])} />
+                    {f.image && <button className="remove-btn" onClick={() => updateArrayItem('flyers', i, 'image', '')}>Remove image</button>}
                   </div>
                 </div>
                 <button className="remove-btn" onClick={() => removeArrayItem('flyers', i)}>Remove item</button>
@@ -276,6 +283,7 @@ export default function Dashboard({ initialContent }) {
                   <div className="item-row">
                     {group.logo && <img className="thumb-preview" src={group.logo} alt="" />}
                     <input type="file" accept="image/*" onChange={(e) => e.target.files[0] && uploadGroupLogo(gi, e.target.files[0])} />
+                    {group.logo && <button className="remove-btn" onClick={() => updateGroupField(gi, 'logo', '')}>Remove logo</button>}
                   </div>
                 </div>
 
