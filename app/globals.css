@@ -54,6 +54,11 @@ html[data-theme="light"] .theme-toggle{ background:rgba(255,255,255,0.7); }
 .frame-corner{ position:absolute; width:70px; height:70px; border-top:2px solid var(--amber); border-left:2px solid var(--amber); opacity:0.3; }
 .frame-corner.f1{ top:20%; left:6%; } .frame-corner.f2{ top:66%; left:80%; transform:rotate(180deg); border-color:var(--muted); } .frame-corner.f3{ top:12%; left:88%; transform:rotate(90deg); }
 .hero .wrap{ position:relative; z-index:2; display:grid; grid-template-columns:1.15fr 0.85fr; gap:56px; align-items:center; padding:120px 32px 60px; }
+
+@keyframes heroIn{ from{ opacity:0; transform:translateY(22px); } to{ opacity:1; transform:translateY(0); } }
+.hero-intro{ animation:heroIn 0.9s ease both; }
+.hero-intro.delay{ animation-delay:0.15s; }
+@media (prefers-reduced-motion: reduce){ .hero-intro{ animation:none; } }
 .eyebrow{ display:inline-flex; align-items:center; gap:8px; font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--muted); border:1px solid var(--line); padding:6px 12px; border-radius:20px; margin-bottom:28px; }
 .eyebrow .dot{ width:7px; height:7px; border-radius:50%; background:var(--amber); animation:pulse 2.4s ease-in-out infinite; }
 @keyframes pulse{ 0%,100%{ opacity:1; } 50%{ opacity:0.45; } }

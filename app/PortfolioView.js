@@ -149,18 +149,19 @@ export default function PortfolioView({ content }) {
         </div>
 
         <div className="wrap">
-          <div>
+          <div className="hero-intro">
             <div className="eyebrow"><span className="dot" /> {hero.eyebrow}</div>
             <h1 dangerouslySetInnerHTML={{ __html: hero.name.replace(' ', '<br>') }} />
             <p className="hero-role">{hero.role}</p>
             <p className="hero-tag">{hero.tagline}</p>
             <div className="hero-cta">
               <a href="#experience" className="btn btn-primary">See my work ↓</a>
+              <a href="/resume.pdf" download className="btn btn-ghost">Download résumé</a>
               <a href={`mailto:${contact.email}`} className="btn btn-ghost">Get in touch</a>
             </div>
           </div>
 
-          <div className="hero-portrait parallax" data-speed="-0.08">
+          <div className="hero-portrait parallax hero-intro delay" data-speed="-0.08">
             <div className="portrait-frame">
               <span className="portrait-corner pc1" />
               <span className="portrait-corner pc2" />
