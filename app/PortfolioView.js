@@ -116,7 +116,7 @@ export default function PortfolioView({ content }) {
     return () => observer.disconnect();
   }, [content]);
 
-  const { hero, about, reels, flyers, experience, projects, contact } = content;
+  const { hero, about, reels, flyers, experience, projects, contact, resume } = content;
 
   return (
     <>
@@ -156,7 +156,7 @@ export default function PortfolioView({ content }) {
             <p className="hero-tag">{hero.tagline}</p>
             <div className="hero-cta">
               <a href="#experience" className="btn btn-primary">See my work ↓</a>
-              <a href="/resume.pdf" download className="btn btn-ghost">Download résumé</a>
+              <a href={resume?.url || '/resume.pdf'} download className="btn btn-ghost">Download résumé</a>
               <a href={`mailto:${contact.email}`} className="btn btn-ghost">Get in touch</a>
             </div>
           </div>
@@ -289,7 +289,10 @@ export default function PortfolioView({ content }) {
               if (thumb) {
                 return (
                   <a className="reel-card reveal" key={i} style={delay} href={r.url} target="_blank" rel="noopener noreferrer">
-                    <img src={thumb} alt={r.label || meta.label} />
+                    <div className="media-frame">
+                      <img className="media-backdrop" src={thumb} alt="" aria-hidden="true" />
+                      <img className="media-fg" src={thumb} alt={r.label || meta.label} />
+                    </div>
                     <div className="card-badge" dangerouslySetInnerHTML={{
                       __html: `${ICONS[meta.icon]}<span>${meta.label}</span>`,
                     }} />
@@ -319,7 +322,10 @@ export default function PortfolioView({ content }) {
               const isInstagram = /instagram\.com/.test(f.url || '');
               return f.image ? (
                 <a className="flyer-card reveal" key={i} style={delay} href={f.url} target="_blank" rel="noopener noreferrer">
-                  <img src={f.image} alt={f.caption || 'Flyer design'} />
+                  <div className="media-frame">
+                    <img className="media-backdrop" src={f.image} alt="" aria-hidden="true" />
+                    <img className="media-fg" src={f.image} alt={f.caption || 'Flyer design'} />
+                  </div>
                   {isInstagram && (
                     <div className="card-badge" dangerouslySetInnerHTML={{ __html: `${ICONS.instagram}<span>Design post</span>` }} />
                   )}

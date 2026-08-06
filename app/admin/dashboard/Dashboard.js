@@ -123,6 +123,20 @@ export default function Dashboard({ initialContent }) {
     }
   }
 
+  async function uploadResume(file) {
+    const fd = new FormData();
+    fd.append('file', file);
+    setStatus('Uploading résumé…');
+    const res = await fetch('/api/upload', { method: 'POST', body: fd });
+    const data = await res.json();
+    if (data.ok) {
+      setContent((c) => ({ ...c, resume: { url: data.url } }));
+      setStatus('Résumé uploaded — remember to Save.');
+    } else {
+      setStatus(data.error || 'Upload failed');
+    }
+  }
+
   async function save() {
     setStatus('Saving…');
     const res = await fetch('/api/content', {
@@ -176,6 +190,19 @@ export default function Dashboard({ initialContent }) {
             </div>
             <div className="field"><label>Photo caption</label>
               <input value={content.hero.portraitCaption} onChange={(e) => setHero('portraitCaption', e.target.value)} /></div>
+
+            <h3 style={{ marginTop: 32 }}>Résumé</h3>
+            <p className="status-text" style={{ marginBottom: 12 }}>
+              Upload a PDF to update the "Download résumé" button on the site — no code changes needed.
+            </p>
+            <div className="field">
+              <div className="item-row">
+                {content.resume?.url && (
+                  <a className="btn btn-ghost" href={content.resume.url} target="_blank" rel="noreferrer">View current résumé ↗</a>
+                )}
+                <input type="file" accept="application/pdf" onChange={(e) => e.target.files[0] && uploadResume(e.target.files[0])} />
+              </div>
+            </div>
 
             <h3 style={{ marginTop: 32 }}>About</h3>
             <div className="field"><label>Summary (first line)</label>

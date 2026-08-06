@@ -172,10 +172,14 @@
           "role": "Associate Information Technology & Digital Officer",
           "company": "CT Smith Securities (Pvt) Ltd",
           "bullets": [
-            "Managed the end-to-end KYC process \u2014 reviewing applications, verifying documents, authenticating clients via video call.",
-            "Coordinated with vendors on domain/DNS, Google Workspace admin and endpoint security; maintained the company website and internal IT hardware.",
-            "Directed and produced business podcast episodes end to end, from shoot to edit.",
-            "Designed all company promotional material \u2014 posters, flyers, digital assets \u2014 and ran social media content end to end."
+            "Managed the end-to-end KYC process, reviewing client applications, verifying supporting documents, and authenticating users via video calls.",
+            "Assisted clients with account creation, guided them through onboarding, and resolved technical issues directly.",
+            "Coordinated with third-party vendors on domain and DNS management, Google Workspace administration, and endpoint security.",
+            "Maintained the company website and handled internal IT hardware and network issues.",
+            "Conceptualized shoot locations, directed setups, and handled full production of business podcast episodes including shooting and editing.",
+            "Designed all company promotional materials including posters, flyers, and digital assets using Adobe tools.",
+            "Managed company social media end to end, covering content planning, designing, scheduling, and posting.",
+            "Maintained corporate documentation and handled daily data entry and operational reporting."
           ]
         },
         {
@@ -183,9 +187,12 @@
           "role": "Associate Information Technology & Digital Officer",
           "company": "CT Smith Asset Management (Pvt) Ltd",
           "bullets": [
-            "Maintained and optimized the company website and corporate social platforms.",
-            "Designed promotional posters, flyers and leaflets for business use.",
-            "Supported IT infrastructure audits and internal network troubleshooting."
+            "Maintained and optimized the company website and corporate social media platforms.",
+            "Coordinated with third-party hosting providers and software vendors to implement system enhancements and resolve technical issues.",
+            "Designed promotional materials including posters, flyers, and leaflets for business use.",
+            "Managed backend system approvals and supported internal IT hardware and network troubleshooting.",
+            "Assisted in preparing and conducting IT infrastructure audits.",
+            "Reviewed company documents and reports to ensure alignment with internal formatting and quality standards."
           ]
         }
       ]
@@ -199,9 +206,11 @@
           "role": "Assistant Manager",
           "company": "",
           "bullets": [
-            "Oversaw website/app changes, contributing to a 20% lift in user engagement and 15% gain in functional efficiency.",
-            "Tracked UI/UX performance and analyzed 10+ homepage modules daily for optimization.",
-            "Coordinated regional UAT and onsite project initiatives, lifting operational efficiency by 10%."
+            "Oversaw modifications to the website and app in alignment with company requirements, resulting in a 20% improvement in user engagement and a 15% increase in overall functionality efficiency.",
+            "Led the monitoring and tracking of UI/UX performance on the Daraz platform, implementing improvements to enhance user engagement and satisfaction.",
+            "Performed daily analysis of over 10 modules and assets on the Daraz homepage, identifying opportunities for optimization and taking action to ensure platform efficiency and effectiveness.",
+            "Strengthened collaboration among relevant teams and facilitated data-driven decision-making to advance continuous enhancements and innovation on the website.",
+            "Collaborated with regional teams to coordinate User Acceptance Testing (UAT) and onsite project initiatives, resulting in a 10% increase in operational efficiency."
           ]
         },
         {
@@ -209,8 +218,11 @@
           "role": "On-Site Executive",
           "company": "",
           "bullets": [
-            "Ran mega sale campaigns \u2014 11.11, Avurudu and seasonal promos \u2014 with Design and Merchandising teams.",
-            "Built and published campaign pages in the Daraz CMS from designer mockups, sustaining an 80% CTR on the homepage."
+            "Created and managed mega sale campaigns including 11.11, Avurudu, and seasonal promotions, consistently meeting client and management satisfaction targets.",
+            "Collaborated with Design and Merchandising teams to plan and execute campaigns, driving engagement and conversions on the platform.",
+            "Analysed weekly campaign performance, identifying areas for improvement and implementing solutions to improve effectiveness.",
+            "Built and published campaign and promotional pages within the Daraz CMS, working from designer mockups and internal templates to match required layouts.",
+            "Successfully maintained an 80% CTR on the Daraz homepage, optimising user engagement and platform visibility."
           ]
         }
       ]
@@ -224,9 +236,10 @@
           "role": "Software Developer",
           "company": "",
           "bullets": [
-            "Managed e-commerce sites Indochina.lk, Findfast.lk and booking portal CityBook.LK.",
-            "Built and maintained WordPress sites with Elementor for clients, applying SEO for visibility.",
-            "Designed logos, banners and marketing images for client branding."
+            "Managed e-commerce websites: Indochina.lk, Findfast.lk, and booking portal CityBook.LK.",
+            "Developed and maintained multiple WordPress websites for national and international clients, using Elementor for efficient template edits and applying SEO strategies to boost visibility.",
+            "Successfully customized front-end components in ongoing projects, ensuring alignment with client requirements and industry standards.",
+            "Designed logos, banners, and marketing images to support branding initiatives and promotional campaigns, enhancing brand identity and engagement."
           ]
         },
         {
@@ -234,8 +247,9 @@
           "role": "Intern Web & Mobile Developer",
           "company": "",
           "bullets": [
-            "Improved UI and functionality of a WordPress site; built a companion mobile app using React Native WebView.",
-            "Developed and tested pages with HTML, CSS and PHP."
+            "Implemented modifications to enhance the user interface and functionality of the company's WordPress-based website, contributing to its overall improvement and usability.",
+            "Built a mobile application for an existing website using React Native WebView, ensuring seamless integration and smooth user interactions.",
+            "Developed and tested web pages using HTML, CSS, and PHP to ensure functionality and user experience met standards."
           ]
         }
       ]
@@ -279,5 +293,8 @@
     "email": "bkzameer@gmail.com",
     "phone": "+94 75 269 2111",
     "linkedin": "https://linkedin.com/in/bk-mohamed-zameer"
+  },
+  "resume": {
+    "url": "/resume.pdf"
   }
 }

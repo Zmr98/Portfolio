@@ -4,9 +4,14 @@ import { supabase } from '@/lib/supabase';
 
 export const dynamic = 'force-dynamic';
 
-const ALLOWED_EXT = ['jpg', 'jpeg', 'png', 'webp', 'gif'];
-const MAX_BYTES = 8 * 1024 * 1024; // 8MB
+const ALLOWED_EXT = ['jpg', 'jpeg', 'png', 'webp', 'gif', 'pdf'];
+const MAX_BYTES = 12 * 1024 * 1024; // 12MB (covers a multi-page resume PDF too)
 const BUCKET = 'uploads';
+
+const CONTENT_TYPES = {
+  jpg: 'image/jpeg', jpeg: 'image/jpeg', png: 'image/png',
+  webp: 'image/webp', gif: 'image/gif', pdf: 'application/pdf',
+};
 
 // Creates the storage bucket on first use so there's no manual step in
 // the Supabase dashboard beyond running the SQL in the README once.
@@ -33,7 +38,7 @@ export async function POST(req) {
 
   const bytes = Buffer.from(await file.arrayBuffer());
   if (bytes.length > MAX_BYTES) {
-    return NextResponse.json({ error: 'File too large (max 8MB)' }, { status: 400 });
+    return NextResponse.json({ error: 'File too large (max 12MB)' }, { status: 400 });
   }
 
   const rawExt = (file.name.split('.').pop() || 'jpg').toLowerCase();
@@ -43,7 +48,7 @@ export async function POST(req) {
   try {
     await ensureBucket();
     const { error } = await supabase.storage.from(BUCKET).upload(filename, bytes, {
-      contentType: file.type || 'image/jpeg',
+      contentType: CONTENT_TYPES[ext] || file.type || 'application/octet-stream',
       upsert: false,
     });
     if (error) throw error;
